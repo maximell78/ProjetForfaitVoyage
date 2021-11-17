@@ -1,4 +1,11 @@
-:host {
-    background-color: salmon;
-    padding: 10rem;
+.text-droit {
+    text-align: right;
+}
+
+.margNegTop {
+    margin-top: -3em;
+}
+
+.blue {
+    color: blue;
 }

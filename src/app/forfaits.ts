@@ -1,4 +1,4 @@
-export interface Forfait {
+export interface Forfaits {
     id: number;
     destination: string;
     villeDepart: string;
@@ -6,12 +6,14 @@ export interface Forfait {
         nom: string;
         coordonnees: string;
         nombreEtoiles: number;
-        nombreChambres: number;
-        caracteristiques: string
+        nombreChambres: string;
+        caracteristiques: string;
+        avis: string
     }
     dateDepart: string;
-    dateRetour: string;
-    prix: number;
-    rabais: number;
+    duree: string;
+    prix: string;
+    rabais: string;
+    nouveauPrix: string;
     vedette: boolean
 }
