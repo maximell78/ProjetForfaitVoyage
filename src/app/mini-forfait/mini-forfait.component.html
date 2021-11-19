@@ -8,8 +8,8 @@
                             <div class="row">
                                 <div class="col-6">
                                     <app-destination [destination]="forfait.destination"></app-destination>
-                                    <app-nom-hotel [hotel]="forfait.hotel.nom"></app-nom-hotel>
-                                    <app-etoiles [etoile]="forfait.hotel.nombreEtoiles"></app-etoiles>
+                                    <app-nom-hotel [hotel]="forfait.hotel.nom"></app-nom-hotel>                                    
+                                    
                                 </div>
                                 <div class="col-6">
                                     <app-ville-depart [ville]="forfait.villeDepart"></app-ville-depart>
@@ -19,6 +19,7 @@
                                 </div>
                             </div>
                         </div>
+                        <app-etoiles [rating]="forfait.hotel.nombreEtoiles"></app-etoiles>
                     </div>                    
                 </div>
             </div>                        

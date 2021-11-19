@@ -3,9 +3,14 @@
 }
 
 .margNegTop {
-    margin-top: -3em;
+    margin-top: -2em;
 }
 
 .blue {
     color: blue;
+}
+
+.caracteristique {
+    font-size: xx-small;
+    color: gray;
 }

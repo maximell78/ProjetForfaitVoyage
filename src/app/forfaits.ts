@@ -7,7 +7,8 @@ export interface Forfaits {
         coordonnees: string;
         nombreEtoiles: number;
         nombreChambres: string;
-        caracteristiques: string;
+        description: string;
+        caracteristiques: any;
         avis: string
     }
     dateDepart: string;
