@@ -5,3 +5,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .rayer{
     text-decoration: line-through;
 }
+
+.bgBlue{
+    background-color: rgb(123, 173, 247);
+}

@@ -17,8 +17,9 @@ export const FORFAITS: Forfaits[] = [
         duree: ' | 7 jours',
         prix: '3769 $',
         rabais: '',
+        affichageRabais: false,
         nouveauPrix: '',
-        vedette: false
+        vedette: true
     },
     {   id: 2,
         destination: 'Kinetta, Grèce',
@@ -36,8 +37,9 @@ export const FORFAITS: Forfaits[] = [
         duree: ' | 14 jours',
         prix: '2549 $',
         rabais: '700 $',
+        affichageRabais: true,
         nouveauPrix: '1849 $',
-        vedette: true
+        vedette: false
     },
     {   id: 3,
         destination: 'Rome, Italie',
@@ -55,8 +57,9 @@ export const FORFAITS: Forfaits[] = [
         duree: ' | 8 jours',
         prix: '2009 $',
         rabais: '',
+        affichageRabais: false,
         nouveauPrix: '',
-        vedette: false
+        vedette: true
     },
     {   id: 4,
         destination: 'Lisbone, Portugal',
@@ -74,7 +77,8 @@ export const FORFAITS: Forfaits[] = [
         duree: ' | 7 jours',
         prix: '1519 $',
         rabais: '100 $',
-        nouveauPrix: '1419',
+        affichageRabais: true,
+        nouveauPrix: '1419 $',
         vedette: true
     },
     {   id: 5,
@@ -93,6 +97,7 @@ export const FORFAITS: Forfaits[] = [
         duree: ' | 18 jours',
         prix: '6699 $',
         rabais: '1100 $',
+        affichageRabais: true,
         nouveauPrix: '5599 $',
         vedette: true
     },
@@ -112,7 +117,8 @@ export const FORFAITS: Forfaits[] = [
         duree: ' | 10 jours',
         prix: '2200 $',
         rabais: '300 $',
+        affichageRabais: true,
         nouveauPrix: '1900 $',
-        vedette: true
+        vedette: false
     }
 ]

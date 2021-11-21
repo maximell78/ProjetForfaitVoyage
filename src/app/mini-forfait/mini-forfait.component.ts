@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Forfaits } from '../forfaits';
 import { FORFAITS } from '../mock-forfaits';
 
@@ -9,8 +9,7 @@ import { FORFAITS } from '../mock-forfaits';
 })
 export class MiniForfaitComponent implements OnInit {
   tableauForfaits: Forfaits[] = FORFAITS ;
-  
-  constructor() { }
+    constructor() { }
 
   ngOnInit(): void {
   }

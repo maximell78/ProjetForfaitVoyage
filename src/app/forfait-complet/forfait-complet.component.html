@@ -1,46 +1,46 @@
-        <div class="container-fluid" *ngFor="let forfait of tableauForfaits">
-            <mat-card class="card mt-3">
-                <mat-card-title>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-6">
-                                <app-destination [destination]="forfait.destination"></app-destination>                                
-                            </div>
-                            <div class="col-6">
-                                <app-ville-depart [ville]="forfait.villeDepart"></app-ville-depart>
-                            </div>
-                        </div>
-                    </div>                    
-                </mat-card-title>
-                <mat-card-subtitle>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-6">
-                                <app-nom-hotel [hotel]="forfait.hotel.nom"></app-nom-hotel>
-                            </div>
-                            <div class="col-6 text-droit">
-                                <app-detail-date [date]="forfait.dateDepart" [duree]="forfait.duree"></app-detail-date>
-                                <app-prix class="rayer" [prix]="forfait.prix"></app-prix>
-                                <app-prix [rabais]="forfait.rabais" [nouveauPrix]="forfait.nouveauPrix"></app-prix> 
-                            </div>
-                        </div>
-                    </div>                    
-                </mat-card-subtitle>
-                <mat-card-content class="margNegTop">                
-                <p>
-                    <app-etoiles [rating]="forfait.hotel.nombreEtoiles"></app-etoiles>
-                </p>
-                <p class="caracteristique">                    
-                    <app-info-hotel [infoHotel]="forfait.hotel.caracteristiques"></app-info-hotel>
-                </p>
-                <p>
-                    <app-info-hotel [infoHotel]="forfait.hotel.nombreChambres"></app-info-hotel>
-                    <app-info-hotel [infoHotel]="forfait.hotel.description"></app-info-hotel>
-                    <app-info-hotel [infoHotel]="forfait.hotel.coordonnees"></app-info-hotel>
-                </p>
-                </mat-card-content>
-                <mat-card-actions>
-                <a href="" class="blue"><app-info-hotel [infoHotel]="forfait.hotel.avis"></app-info-hotel></a>
-                </mat-card-actions>
-            </mat-card>
-        </div>
+<div class="container-fluid" *ngFor="let forfait of tableauForfaits">
+    <mat-card class="card mt-3" [ngClass]="{'bgBlue': forfait.vedette === true}" >
+        <mat-card-title>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6">
+                        <app-destination [destination]="forfait.destination"></app-destination>                                
+                    </div>
+                    <div class="col-6">
+                        <app-ville-depart [ville]="forfait.villeDepart"></app-ville-depart>
+                    </div>
+                </div>
+            </div>                    
+        </mat-card-title>
+        <mat-card-subtitle>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6">
+                        <app-nom-hotel [hotel]="forfait.hotel.nom"></app-nom-hotel>
+                    </div>
+                    <div class="col-6 text-droit">
+                        <app-detail-date [date]="forfait.dateDepart" [duree]="forfait.duree"></app-detail-date>
+                        <app-prix [ngClass]="{'rayer': forfait.affichageRabais}" [prix]="forfait.prix"></app-prix>
+                        <app-prix [rabais]="forfait.rabais" [nouveauPrix]="forfait.nouveauPrix"></app-prix> 
+                    </div>
+                </div>
+            </div>                    
+        </mat-card-subtitle>                
+        <mat-card-content class="margNegTop">                
+        <p>
+            <app-etoiles [rating]="forfait.hotel.nombreEtoiles"></app-etoiles>
+        </p>
+        <p class="caracteristique">                    
+            <app-info-hotel [infoHotel]="forfait.hotel.caracteristiques"></app-info-hotel>
+        </p>
+        <p>
+            <app-info-hotel [infoHotel]="forfait.hotel.nombreChambres"></app-info-hotel>
+            <app-info-hotel [infoHotel]="forfait.hotel.description"></app-info-hotel>
+            <app-info-hotel [infoHotel]="forfait.hotel.coordonnees"></app-info-hotel>
+        </p>
+        </mat-card-content>
+        <mat-card-actions>
+        <a href="" class="blue"><app-info-hotel [infoHotel]="forfait.hotel.avis"></app-info-hotel></a>
+        </mat-card-actions>
+    </mat-card>
+</div>

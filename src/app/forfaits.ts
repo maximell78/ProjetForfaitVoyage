@@ -15,6 +15,7 @@ export interface Forfaits {
     duree: string;
     prix: string;
     rabais: string;
+    affichageRabais: boolean;
     nouveauPrix: string;
     vedette: boolean
 }
