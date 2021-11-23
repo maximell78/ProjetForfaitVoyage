@@ -1,27 +1,23 @@
-<div class="container-fluid pt-3">
+<div class="container-fluid p-3">
     <div class="row">
-        <div class="col-4 card m-3" *ngFor="let forfait of tableauForfaits" [hidden]="!forfait.vedette">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-6">
-                                    <app-destination [destination]="forfait.destination"></app-destination>
-                                    <app-nom-hotel [hotel]="forfait.hotel.nom"></app-nom-hotel>                                    
-                                </div>
-                                <div class="col-6">
-                                    <app-ville-depart [ville]="forfait.villeDepart"></app-ville-depart>
-                                    <app-prix [ngClass]="{'rayer': forfait.affichageRabais}" [prix]="forfait.prix"></app-prix>
-                                    <app-prix [rabais]="forfait.rabais" [nouveauPrix]="forfait.nouveauPrix"></app-prix>                                    
-                                    <app-detail-date [date]="forfait.dateDepart" [duree]="forfait.duree"></app-detail-date>
-                                </div>
-                            </div>
+        <ng-container *ngFor="let forfait of tableauForfaits">
+            <div class="col-4 card m-3" *ngIf="forfait.vedette">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-6">
+                            <app-destination [destination]="forfait.destination"></app-destination>
+                            <app-nom-hotel [hotel]="forfait.hotel.nom"></app-nom-hotel>                                    
+                        </div>
+                        <div class="col-6">
+                            <app-ville-depart [ville]="forfait.villeDepart"></app-ville-depart>
+                            <app-prix [ngClass]="{'rayer': forfait.affichageRabais}" [prix]="forfait.prix"></app-prix>
+                            <app-prix [rabais]="forfait.rabais" [nouveauPrix]="forfait.nouveauPrix"></app-prix>                                    
+                            <app-detail-date [date]="forfait.dateDepart" [duree]="forfait.duree"></app-detail-date>
                         </div>
                         <app-etoiles [rating]="forfait.hotel.nombreEtoiles"></app-etoiles>
-                    </div>                    
-                </div>
-            </div>                        
-        </div>        
+                    </div>                
+                </div>            
+            </div>
+        </ng-container>        
     </div>
-</div>
+</div>>
